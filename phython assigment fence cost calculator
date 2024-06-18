@@ -1,0 +1,36 @@
+# fencing calculator
+# author: Jack Martin-burns
+# date 22/05/2024
+# version 1
+print("intruction")
+print()
+print("price of fencing per meter")
+print("then input and height and width")
+print("program will print the cost of fencing")
+print()
+number=""
+def number_check(questions):
+    error = "put in a number bigger than zero\n"
+    while True:
+        try:
+            number=float(input(questions))
+            if number>0:
+                return number
+            else:
+                print(error)
+        except ValueError:
+                print(error)
+keepgoing= "N"
+while keepgoing =="N":
+    price= number_check("$price per meter")
+    Height = number_check("height")
+    width= number_check ("width")
+    perimeter= (Height+width)*2
+    cost=(perimeter)*price
+    print(f"fencing cost for your land: = ${cost}")
+    keepgoing = input ("continue? Y/N ")
+    if keepgoing!=("Y"):
+        keepgoing="N"
+print("thank you for using the program")
+
+            
